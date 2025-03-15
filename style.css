@@ -1,0 +1,118 @@
+/* Apply Poppins font to the entire body */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-image: url('../static/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Background blur effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Input and button styling */
+input, button {
+    margin: 10px 0;
+    padding: 15px;
+    width: 80%;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, button:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Soft glow on focus */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Slight press effect on click */
+}
+
+/* Result box styling */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    max-width: 1000px;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.result:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Lighten on hover */
+}
+
+input, .result, button {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expense Splitter App to manage and split your expenses easily.">
+    <meta property="og:title" content="Expense Splitter">
+    <meta property="og:description" content="Manage and split expenses with ease using this simple web app.">
+    <meta property="og:image" content="path/to/your-image.jpg">
+    <meta property="og:url" content="http://yourwebsite.com">
+    <title>Expense Splitter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Expense Splitter</h2>
+        <label for="totalAmount">Total Amount: </label>
+        <input type="number" id="totalAmount" placeholder="Enter total amount" aria-describedby="totalAmountDesc">
+        <div id="contributors"></div>
+        <button onclick="addPerson()">Add Person</button>
+        <button onclick="calculateExpenses()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
